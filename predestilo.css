@@ -1,0 +1,44 @@
+body {
+    background-color: rgb(139, 130, 130);
+    font-family: 'Monotype Corsiva';
+    color: rgba(182, 156, 12, 0.836);
+}
+
+h1 { 
+    margin: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+header{
+    background-color: #000000;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navegacion {
+    text-align: right;
+    font-size: 22px;
+    padding: 10px;
+    
+}
+
+a {
+    color: azure;
+    padding: 8px;
+    text-decoration: none;
+}
+
+.cajas1 {
+    background-color: #000000;
+    color:#be1616;
+
+    height: 500px;
+}
+footer{
+    display: flex;
+    background-color: #121312;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+}
