@@ -1,4 +1,18 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background-color: rgb(139, 130, 130);
     font-family: 'Monotype Corsiva';
     color: rgba(182, 156, 12, 0.836);
@@ -31,14 +45,49 @@ a {
 
 .cajas1 {
     background-color: #000000;
-    color:#be1616;
-
-    height: 500px;
+    height: 200%;
 }
-footer{
-    display: flex;
+.slider {
+  position: relative;
+  width: 500%;
+  max-width: 100%;
+  height: 40%;
+  margin: 5px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 90px rgba(0,0,0,120);
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+}
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* <-- Rellena y recorta, pero se ve elegante */
+  object-position: center; /* <-- Enfoca la parte de abajo del chef es decir mas abajo de la imagen */
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* <-- Rellena y recorta, pero se ve elegante */
+  object-position:center; /* <-- Enfoca la parte de abajo del chef es decir mas abajo de la imagen */
+}
+
+
+footer {
+    margin-top: auto;
     background-color: #121312;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
-    margin: 10px;
+    color: white;
+    font-size: 16px;
 }
