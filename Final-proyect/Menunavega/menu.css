@@ -1,0 +1,13 @@
+#seccionMenu {
+  background: white;
+  color: rgb(34, 174, 160);
+  padding: 30px;
+  max-width: 600px;
+  margin: 30px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.oculto {
+  display: none;
+}
