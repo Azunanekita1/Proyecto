@@ -1,3 +1,5 @@
+/* <--
+
 #seccionMenu {
   background: white;
   color: rgb(34, 174, 160);
@@ -10,4 +12,23 @@
 
 .oculto {
   display: none;
+}  */
+.contenido1 {
+  
+  background-color: rgb(65, 27, 109);
+  align-items: center;
+  text-align: center;
+  height: 60%;
+  width: 100%;
+  color:  red;
+}
+
+.cajas1 {
+   background-color: #181f85;
+    height: 300%;
+}
+
+.sin-slider .slider,
+.sin-slider .slide .cajas1{
+  display: none !important;
 }

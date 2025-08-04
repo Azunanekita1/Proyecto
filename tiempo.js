@@ -9,7 +9,7 @@ function goToNextSlide() {
   const video = currentSlide.querySelector("video");
 
   if (video && !isVideoPlaying) {
-    // ✅ Si hay video y aún no ha sido reproducido en este ciclo
+    // Si hay video y aún no ha sido reproducido en este ciclo
     isVideoPlaying = true;
 
     video.currentTime = 0;
@@ -23,7 +23,7 @@ function goToNextSlide() {
       goToNextSlide(); // Continua el ciclo
     }, 5000);
   } else if (!video) {
-    // ✅ Slide normal (imagen)
+    // Slide normal (imagen)
     setTimeout(() => {
       index = (index + 1) % totalSlides;
       slides.style.transform = `translateX(-${index * 100}%)`;
@@ -32,6 +32,6 @@ function goToNextSlide() {
   }
 }
 
-// 👇 Iniciar ciclo del slider
+// Iniciar ciclo del slider
 slides.style.transform = `translateX(0%)`;
 goToNextSlide();
