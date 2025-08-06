@@ -35,3 +35,12 @@ function goToNextSlide() {
 // Iniciar ciclo del slider
 slides.style.transform = `translateX(0%)`;
 goToNextSlide();
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Cargar plantilla base con header y footer
+  fetch("index.html ")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('pagina').innerHTML = data;
+    });
+});
