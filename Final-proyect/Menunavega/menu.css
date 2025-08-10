@@ -13,6 +13,18 @@
 .oculto {
   display: none;
 }  */
+
+/* no se esta usando*/
+.cajas2 {
+   background-color: #2d68dc;
+    height: 300%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 .contenido1 {
   
   background-color: rgb(65, 27, 109);
@@ -23,12 +35,85 @@
   color:  red;
 }
 
-.cajas1 {
-   background-color: #181f85;
-    height: 300%;
-}
 
 .sin-slider .slider,
-.sin-slider .slide .cajas1{
+.sin-slider .slide, .cajas1, .sin-slider footer {
   display: none !important;
+}
+.nav1{
+background-color: rgba(0, 0, 0);
+width: 38%;
+padding: 10px;
+
+}
+
+.nav1 a {
+ 
+   border-right: 4px #cdcbc8e7 outset;
+   border-width: 1px;
+   padding: 0.1px 12px;
+
+}
+
+.grid {
+
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(5 ,1fr);
+    /* Dos columnas iguales*/
+   /* grid-template-rows: (4 ,1);  dos filas iguales */
+    gap: 1px; /* espacio entre las celdas*/
+   margin: 5px;
+   padding-bottom: 100px;
+
+}
+
+.grid .conteimage{
+    align-items: center;
+ /* Dos columnas iguales*/
+   /* grid-template-rows: (6 ,1);  dos filas iguales */
+   /* espacio entre las celdas*/
+ width: 180px;
+   height: 200px;
+     object-fit: cover; /* <-- Rellena y recorta, pero se ve elegante */
+  object-position:center; 
+}
+.conteimage {
+    background-color:rgba(145, 155, 7, 0.597);
+    border: 4px #efb810 outset;
+    
+   /*  display: grid;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    border-radius: 10px;
+    gap: 10px;
+    margin: 20px;
+       width: 200px;
+       display: block;
+ */
+}
+a {
+  font-size: 25px;
+  
+}
+
+h2 {
+  text-align: center;
+  font-size: 60px;
+ margin: 10px;
+}
+.division {
+  background-color: rgba(225, 91, 1, 0.309);
+padding: 1px;
+align-items: center;
+margin: 5px;
+}
+.footer1 {
+  color: white;
+    margin-top: auto;
+    background-color: #121312;
+    padding: 20px;
+    text-align: center;
+    font-size: 10px;
 }

@@ -13,7 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: rgb(37, 37, 37);
+    background-color: rgb(0, 0, 0);
     font-family: 'Monotype Corsiva';
     color: rgba(233, 237, 6, 0.836);
 }
@@ -33,10 +33,16 @@ header{
 .navegacion {
     text-align: right;
     font-size: 22px;
-    padding: 10px;
-    
+    padding: 5px;
+
 }
 
+.navegacion a {
+   border-left: 4px #757472ae outset;
+   border-width: 1px;
+   padding: 0.1px 10px;
+   
+}
 a {
     color: azure;
     padding: 8px;
@@ -44,8 +50,9 @@ a {
 }
 
 .cajas1 {
-   background-color: #000000;
-    height: 200%;
+   background-color: #530f92;
+    height: 1000px;
+   
 }
 .slider {
   background-color: rgb(0, 0, 0);
@@ -84,7 +91,6 @@ video {
   object-fit: cover; /* <-- Rellena y recorta, pero se ve elegante */
   object-position:center; /* <-- Enfoca la parte de abajo del chef es decir mas abajo de la imagen */
 }
-
 
 footer {
     margin-top: auto;
