@@ -1,0 +1,92 @@
+
+
+.contenedor-lleno {
+    background-color: rgb(136, 105, 49);
+    align-items: center;
+    grid-template-columns: repeat(2 ,1fr);
+    width: 900px;
+    height: 600px;
+    padding-left: 200px;
+}
+
+.contenedor1{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2 ,1fr);
+    /* Dos columnas iguales*/
+   /* grid-template-rows: (4 ,1);  dos filas iguales */
+    gap: 10px; /* espacio entre las celdas*/
+
+    padding: 10px;
+ height: 600px;
+
+}
+
+ h2 {
+    color: red;
+ }
+
+label {
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+}
+
+h3 { 
+   font-size: 40px;
+}
+
+button {
+    font-size: 20px;
+    padding: 9px;
+}
+
+.btn {
+  background-color: #ff6600;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: #cc5200;
+}
+
+/* Formualrio encima */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(117, 100, 100, 0.5);
+}
+
+.modal-contenido {
+  background-color: rgb(138, 6, 87);
+  margin: 8% auto;
+  padding: 20px;
+  height: 900px;
+  width: 400px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.cerrar {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+input[type="text"], input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+

@@ -3,29 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/../predestilo.css">  
-     <link rel="stylesheet" href="menu.css">
     <title>PEDIDO</title>
+        <link rel="stylesheet" href="/../predestilo.css">  
+     <link rel="stylesheet" href="menu.css">
+     <link rel="stylesheet" href="pedido.css">
+     <link rel="stylesheet" href="/estilo.css">
+
 </head>
 <body >
     <!-- Menu princiapal -->
-    <div id="pagina"> </div>
-
- <!-- Contenidos de las paginas-->
-  <div id="contenido" class="sin-slider">  </div>
-    <h2>Menú del Restaurante</h2>
-    <ul>
-      <li>🍣 Entradas </li>
-      <li>🍖 Plato fuerte </li>
-      <li>🍰 Postres</li>
-      <li>🍰 Bebidas</li>
-      <li>🍰 Postres</li>
-    </ul>
+  <div id="pagina" class="sin-slider" > 
+  </div>
   
+  <button id="abrirFormulario" class="btn">Hacer Pedido</button>
 
-    <!-- Ayuda a llamar los estilos principales, header, footer 
-     y ayuda a ocultar los slides de la pagina principal -->
- <script src="menujava.js">
+  <!-- Modal con formulario -->
+  <div id="modalFormulario" class="modal">
+    <div class="modal-contenido">
 
-</script>
+  <form id="formPedido" method="POST" action="/enviar-pedido">
+    <label>Nombre:</label>
+    <input type="text" name="nombre" required><br><br>
+
+    <label>Correo:</label>
+    <input type="email" name="email" required><br><br>
+
+    <h3>Selecciona tu pedido:</h3>
+    <label><input type="checkbox" name="pedido" value="Pizza Margarita"> Pizza Margarita</label><br>
+    <label><input type="checkbox" name="pedido" value="Pasta Carbonara"> Pasta Carbonara</label><br>
+    <label><input type="checkbox" name="pedido" value="Ensalada César"> Ensalada César</label><br><br>
+
+    <button type="submit">Enviar Pedido</button>
+  </form>
+  <p id="mensajeRespuesta"></p>
+ <button id="cerrarModal">Cerrar</button>
+ </div>  </div>
+
+   <script>
+        document.getElementById("abrirFormulario").onclick = function() {
+          document.getElementById("modalFormulario").style.display = "block";
+        };
+        document.getElementById("cerrarModal").onclick = function() {
+          document.getElementById("modalFormulario").style.display = "none";
+        };
+      </script>
+  <script>
+    document.getElementById("formPedido").addEventListener("submit", async function(e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      const data = {};
+      formData.forEach((value, key) => {
+        if (key === "pedido") {
+          if (!data.pedido) data.pedido = [];
+          data.pedido.push(value);
+        } else {
+          data[key] = value;
+        }
+      });
+
+      const response = await fetch("/enviar-pedido", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+      document.getElementById("mensajeRespuesta").innerText = result.mensaje;
+      document.getElementById("mensajeRespuesta").style.color = result.ok ? "green" : "red";
+    });
+  </script>
+  
+  <script src="pedido.js"> </script>
+  <script src="slides.js"></script>
+ <script src="tiempo.js"></script>
+
+</body>
+  
 </html>

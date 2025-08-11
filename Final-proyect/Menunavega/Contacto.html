@@ -12,15 +12,21 @@
     <div id="pagina"> </div>
 
  <!-- Contenidos FORMULARIO-->
-  <div id="contenido" class="sin-slider">  </div>
-    <h2>FORMULARIO</h2>
-    <ul>
-      <li>🍣 Sushi Especial</li>
-      <li>🍖 Carne Asada</li>
-      <li>🍰 Postres Japoneses</li>
-    </ul>
+  <div id="pagina" class="sin-slider">  </div>
   
+  <h2>Realiza tu Solicitud</h2>
+  <form method="POST" action="/enviar-pedido">
+    <label>Nombre:</label><br>
+    <input type="text" name="nombre" required><br><br>
 
+    <label>Correo:</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Pedido:</label><br>
+    <textarea name="detalle" required></textarea><br><br>
+
+    <button type="submit">Enviar Pedido</button>
+  </form>
     <!-- Ayuda a llamar los estilos principales, header, footer 
      y ayuda a ocultar los slides de la pagina principal -->
  <script src="/Final-proyect/Menunavega/slides.js">

@@ -37,7 +37,7 @@
 
 
 .sin-slider .slider,
-.sin-slider .slide, .cajas1, .sin-slider footer {
+.sin-slider .slide, footer  {
   display: none !important;
 }
 .nav1{
@@ -57,7 +57,7 @@ padding: 10px;
 
 .grid {
 
-    display: grid;
+  display: grid;
     align-items: center;
     grid-template-columns: repeat(5 ,1fr);
     /* Dos columnas iguales*/
@@ -108,12 +108,4 @@ h2 {
 padding: 1px;
 align-items: center;
 margin: 5px;
-}
-.footer1 {
-  color: white;
-    margin-top: auto;
-    background-color: #121312;
-    padding: 20px;
-    text-align: center;
-    font-size: 10px;
 }
