@@ -36,12 +36,12 @@ app.post("/enviar-pedido", async (req, res) => {
   }
 
   try {
-    // Configurar transporte de correo
+    
     let transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: process.env.EMAIL_USER, // tu correo
-        pass: process.env.EMAIL_PASS  // tu contraseña de aplicación
+        user: process.env.EMAIL_USER, 
+        pass: process.env.EMAIL_PASS  
       }
     });
 

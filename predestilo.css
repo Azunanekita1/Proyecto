@@ -91,6 +91,19 @@ video {
   object-fit: cover; /* <-- Rellena y recorta, pero se ve elegante */
   object-position:center; /* <-- Enfoca la parte de abajo del chef es decir mas abajo de la imagen */
 }
+ h2 {
+  color: rgb(223, 222, 183);
+  align-items: center;
+  text-align: center;
+  font-size: 40px;
+  margin: 50px;
+
+ }
+p {
+  color: #d6c20dd8;
+  text-align: center;
+  font-size: 30px;
+}
 
 footer {
     margin-top: auto;
